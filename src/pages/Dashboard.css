@@ -1,0 +1,367 @@
+/* src/pages/Dashboard.css */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.dashboard-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-header p {
+    color: var(--text-secondary);
+}
+
+/* Kartlar */
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    backdrop-filter: var(--glass-blur);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.card-icon {
+    background: var(--bg-main);
+    padding: 1rem;
+    border-radius: 12px;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-info p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.3rem;
+}
+
+.card-info h3 {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.badge {
+    font-size: 0.9rem;
+    padding: 2px 8px;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* Kâr / Zarar Renklendirmeleri */
+.profit-card .card-icon {
+    color: var(--success);
+}
+
+.profit-card h3 {
+    color: var(--success);
+}
+
+.loss-card .card-icon {
+    color: var(--danger);
+}
+
+.loss-card h3 {
+    color: var(--danger);
+}
+
+.text-success {
+    color: var(--success);
+    font-weight: 600;
+}
+
+.text-danger {
+    color: var(--danger);
+    font-weight: 600;
+}
+
+/* Tablo Bölümü */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.add-btn {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.add-btn:hover {
+    opacity: 0.9;
+}
+
+.portfolio-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-card);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.portfolio-table th,
+.portfolio-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+.portfolio-table th {
+    background: var(--bg-main);
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.portfolio-table tr:hover {
+    background: var(--bg-main);
+}
+
+.symbol-cell {
+    color: var(--accent);
+    letter-spacing: 0.5px;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 3rem;
+    background: var(--bg-card);
+    border-radius: 12px;
+    border: 1px dashed var(--border);
+    color: var(--text-secondary);
+}
+
+.sell-btn {
+    background: transparent;
+    color: var(--danger);
+    border: 1px solid var(--danger);
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.sell-btn:hover {
+    background: var(--danger);
+    color: white;
+}
+
+/* src/pages/Dashboard.css - Dosyanın Altına Eklenecekler */
+
+/* Varlık Dağılımı (Asset Allocation) Stilleri */
+.allocation-section {
+    background: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    backdrop-filter: var(--glass-blur);
+}
+
+.allocation-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.allocation-bar-container {
+    display: flex;
+    height: 24px;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    /* Dışarı taşan renkleri kesmek için */
+    background-color: var(--bg-main);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.allocation-segment {
+    height: 100%;
+    transition: width 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.allocation-segment:hover {
+    filter: brightness(1.1);
+    /* Üzerine gelince rengi hafif aç */
+}
+
+.allocation-legends {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: var(--text-primary);
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spin-animation {
+    animation: spin 1s linear infinite;
+}
+
+/* src/pages/Dashboard.css dosyasının en altına eklenecek */
+
+/* Yenileme Butonu Animasyonları */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  .spin-animation {
+    animation: spin 1s linear infinite;
+  }
+  
+  .btn-success-state {
+    background: var(--success) !important;
+    color: white !important;
+    border-color: var(--success) !important;
+    transition: all 0.3s ease;
+  }
+  
+  /* Takip Listesi (Watchlist) Stilleri */
+  .watchlist-section {
+    margin-top: 2rem;
+    background: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+  }
+  
+  .watchlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .watchlist-card {
+    background: var(--bg-main);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: transform 0.2s;
+  }
+  
+  .watchlist-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+  }
+  
+  .watchlist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+  }
+
+  /* YENİ: Hedef Fiyat ve Stop-Loss Animasyonları */
+@keyframes glowSuccess {
+    0% { box-shadow: inset 4px 0 0 #4ade80, inset 0 0 10px rgba(74, 222, 128, 0.1); }
+    50% { box-shadow: inset 4px 0 0 #4ade80, inset 0 0 20px rgba(74, 222, 128, 0.3); }
+    100% { box-shadow: inset 4px 0 0 #4ade80, inset 0 0 10px rgba(74, 222, 128, 0.1); }
+  }
+  
+  @keyframes glowDanger {
+    0% { box-shadow: inset 4px 0 0 #fb7185, inset 0 0 10px rgba(251, 113, 133, 0.1); }
+    50% { box-shadow: inset 4px 0 0 #fb7185, inset 0 0 20px rgba(251, 113, 133, 0.3); }
+    100% { box-shadow: inset 4px 0 0 #fb7185, inset 0 0 10px rgba(251, 113, 133, 0.1); }
+  }
+  
+  .row-target-hit {
+    animation: glowSuccess 2s infinite;
+    background-color: rgba(74, 222, 128, 0.05);
+  }
+  
+  .row-stop-hit {
+    animation: glowDanger 2s infinite;
+    background-color: rgba(251, 113, 133, 0.05);
+  }
+  
+  .target-badge {
+    font-size: 0.65rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 8px;
+    font-weight: bold;
+  }
+  
+  .badge-tp { background: rgba(74, 222, 128, 0.2); color: #4ade80; }
+  .badge-sl { background: rgba(251, 113, 133, 0.2); color: #fb7185; }
+
+  /* Dashboard.css EN ALTINA EKLENECEK */
+.heatmap-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    min-width: 65px;
+    text-align: center;
+  }
+  
+  /* Yüksek Düşüş (%-5 ve altı) */
+  .heat-strong-down { background-color: #be123c; } 
+  /* Normal Düşüş (%0 ile %-5 arası) */
+  .heat-down { background-color: #fb7185; }
+  /* Nötr (%0) */
+  .heat-neutral { background-color: #64748b; }
+  /* Normal Yükseliş (%0 ile %5 arası) */
+  .heat-up { background-color: #34d399; }
+  /* Yüksek Yükseliş (%5 ve üstü) */
+  .heat-strong-up { background-color: #059669; }

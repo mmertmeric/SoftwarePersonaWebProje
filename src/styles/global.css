@@ -1,0 +1,141 @@
+/* src/styles/global.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    height: 70px;
+    background: var(--nav-bg);
+    backdrop-filter: var(--glass-blur);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .nav-brand a {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--text-primary);
+    letter-spacing: -1px;
+  }
+  
+  .nav-brand span {
+    color: var(--accent);
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links a {
+    color: var(--text-secondary);
+    transition: color 0.2s;
+  }
+  
+  .nav-links a:hover {
+    color: var(--accent);
+  }
+  
+  .theme-toggle {
+    background: none;
+    border: 1px solid var(--border);
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+  }
+  
+  .theme-toggle:hover {
+    background: var(--border);
+  }
+  
+  .content-area {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .user-name-brand {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-left: 4px solid var(--accent);
+    padding-left: 12px;
+  }
+  
+  .login-btn {
+    color: var(--text-secondary);
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-links a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  
+  .nav-links a:hover {
+    color: var(--accent);
+  }
+  
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .logout-btn {
+    background: none;
+    border: none;
+    color: var(--danger);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+  
+  .logout-btn:hover {
+    background: rgba(239, 68, 68, 0.1); /* Kırmızımsı hover efekti */
+  }
+
+  .brand-user-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .user-name-brand {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-left: 4px solid var(--accent);
+    padding-left: 12px;
+    line-height: 1.2;
+  }
+  
+  .user-profession {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    padding-left: 16px; /* Sola hizalamak için bordera göre ayarlandı */
+    margin-top: 2px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }

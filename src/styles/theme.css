@@ -1,0 +1,40 @@
+/* src/styles/theme.css */
+:root {
+    /* Midas Light - Temiz ve Aydınlık */
+    --bg-main: #FFFFFF;
+    --bg-card: #F9FAFB;
+    --text-primary: #111827;
+    --text-secondary: #6B7280;
+    --accent: #007AFF; /* Borsa Mavisi */
+    --success: #10B981;
+    --danger: #EF4444;
+    --border: #E5E7EB;
+    --nav-bg: rgba(255, 255, 255, 0.8);
+  }
+  
+  [data-theme='dark'] {
+    /* Silicon Valley Glass - Modern Karanlık */
+    --bg-main: #0B0E14;
+    --bg-card: rgba(23, 27, 34, 0.7);
+    --text-primary: #F3F4F6;
+    --text-secondary: #9CA3AF;
+    --accent: #38BDF8;
+    --success: #34D399;
+    --danger: #FB7185;
+    --border: rgba(255, 255, 255, 0.1);
+    --nav-bg: rgba(11, 14, 20, 0.8);
+    --glass-blur: blur(12px);
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }

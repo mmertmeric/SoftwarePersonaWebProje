@@ -1,0 +1,78 @@
+.history-modal-content {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.3s ease-out;
+  }
+  
+  .history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .history-header h2 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+  }
+  
+  .history-body {
+    padding: 20px 24px;
+    overflow-y: auto;
+  }
+  
+  .history-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .history-table th {
+    text-align: left;
+    padding: 12px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+  }
+  
+  .history-table td {
+    padding: 14px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+    font-size: 0.95rem;
+  }
+  
+  .history-table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .type-badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  
+  .type-buy {
+    background: rgba(56, 189, 248, 0.1);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+  }
+  
+  .type-sell {
+    background: rgba(251, 113, 133, 0.1);
+    color: #fb7185;
+    border: 1px solid rgba(251, 113, 133, 0.2);
+  }
