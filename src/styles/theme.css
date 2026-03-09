@@ -1,11 +1,10 @@
 /* src/styles/theme.css */
 :root {
-    /* Midas Light - Temiz ve Aydınlık */
     --bg-main: #FFFFFF;
     --bg-card: #F9FAFB;
     --text-primary: #111827;
     --text-secondary: #6B7280;
-    --accent: #007AFF; /* Borsa Mavisi */
+    --accent: #007AFF;
     --success: #10B981;
     --danger: #EF4444;
     --border: #E5E7EB;
@@ -13,7 +12,6 @@
   }
   
   [data-theme='dark'] {
-    /* Silicon Valley Glass - Modern Karanlık */
     --bg-main: #0B0E14;
     --bg-card: rgba(23, 27, 34, 0.7);
     --text-primary: #F3F4F6;

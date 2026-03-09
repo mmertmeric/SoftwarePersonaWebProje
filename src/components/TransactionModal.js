@@ -40,7 +40,7 @@ const TransactionModal = ({ isOpen, onClose, initialSymbol = '' }) => {
             setFormData({
               symbol: found.name,
               quantity: '',
-              price: found.price // Anlık fiyatı otomatik getir
+              price: found.price
             });
             setSelectedStockInfo(found);
           }
@@ -58,7 +58,7 @@ const TransactionModal = ({ isOpen, onClose, initialSymbol = '' }) => {
   // ARAMA FİLTRELEME (API'den gelen dev liste içinde arar)
   const filteredStocks = allStocks.filter(stock => 
     stock.name.includes(searchTerm.toUpperCase())
-  ).slice(0, 10); // Performans için ilk 10 sonucu gösteriyoruz
+  ).slice(0, 10);
 
   // HİSSE SEÇME İŞLEMİ
   const handleStockSelect = (stock) => {
@@ -66,7 +66,7 @@ const TransactionModal = ({ isOpen, onClose, initialSymbol = '' }) => {
     setFormData({
       ...formData,
       symbol: stock.name,
-      price: stock.price // Seçilen hissenin fiyatını anında inputa doldur
+      price: stock.price
     });
     setSelectedStockInfo(stock);
     setShowDropdown(false);
@@ -116,7 +116,7 @@ const TransactionModal = ({ isOpen, onClose, initialSymbol = '' }) => {
                   if (e.target.value === '') setFormData({...formData, symbol: ''});
                 }}
                 onFocus={() => setShowDropdown(true)}
-                readOnly={!!initialSymbol} // Tablodan tıklandıysa sembolü kilitliyoruz
+                readOnly={!!initialSymbol}
                 style={{ 
                   paddingLeft: '40px',
                   background: initialSymbol ? 'var(--bg-main)' : '',

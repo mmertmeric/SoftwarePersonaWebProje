@@ -7,8 +7,8 @@ import { PortfolioProvider } from './context/PortfolioContext';
 import MainLayout from './components/MainLayout';
 import Auth from './pages/Auth/Auth'; 
 import Dashboard from './pages/Dashboard';
-import StockSearch from './pages/StockSearch'; // Keşfet sayfamız
-import Profile from './pages/Profile'; // Profil ve Ayarlar sayfamız
+import StockSearch from './pages/StockSearch';
+import Profile from './pages/Profile';
 import './styles/theme.css';
 import './styles/global.css';
  

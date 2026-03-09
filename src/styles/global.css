@@ -112,7 +112,7 @@
   }
   
   .logout-btn:hover {
-    background: rgba(239, 68, 68, 0.1); /* Kırmızımsı hover efekti */
+    background: rgba(239, 68, 68, 0.1);
   }
 
   .brand-user-container {
@@ -134,7 +134,7 @@
   .user-profession {
     font-size: 0.75rem;
     color: var(--text-secondary);
-    padding-left: 16px; /* Sola hizalamak için bordera göre ayarlandı */
+    padding-left: 16px;
     margin-top: 2px;
     font-weight: 500;
     letter-spacing: 0.5px;

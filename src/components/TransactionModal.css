@@ -107,8 +107,6 @@
     to { transform: translateY(0); opacity: 1; }
   }
 
-  /* src/components/TransactionModal.css dosyasının en altına eklenecek */
-
 .search-container {
     position: relative;
     width: 100%;

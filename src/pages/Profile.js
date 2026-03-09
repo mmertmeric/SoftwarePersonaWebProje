@@ -4,7 +4,7 @@ import { useAuth } from '../context/AuthContext';
 import { usePortfolio } from '../context/PortfolioContext';
 import { User, Key, Target, Code, Save, Database, Download, CheckCircle, Briefcase, FileText } from 'lucide-react';
 import { fetchLivePrices } from '../services/api';
-import { getSectorBySymbol } from '../utils/sectorMapping'; // Sektör verisi için eklendi
+import { getSectorBySymbol } from '../utils/sectorMapping';
 import './Profile.css';
 
 const Profile = () => {
@@ -21,7 +21,7 @@ const Profile = () => {
   
   // Canlı Veri ve Portföy Değeri
   const [currentValue, setCurrentValue] = useState(0);
-  const [livePrices, setLivePrices] = useState({}); // PDF Raporu için anlık fiyatları tutuyoruz
+  const [livePrices, setLivePrices] = useState({});
 
   useEffect(() => {
     if (user) {
@@ -89,7 +89,7 @@ const Profile = () => {
 
   const formatCurrency = (val) => new Intl.NumberFormat('tr-TR', { style: 'currency', currency: 'TRY' }).format(val);
 
-  // --- YENİ EKLENEN: PDF RAPORU OLUŞTURMA (Zero-Dependency) ---
+  // PDF RAPORU OLUŞTURMA
   const handleGeneratePDF = () => {
     const totalCost = portfolio.reduce((acc, stock) => acc + (stock.quantity * stock.averagePrice), 0);
     const totalProfitLoss = currentValue - totalCost;

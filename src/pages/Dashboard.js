@@ -15,7 +15,7 @@ import {
   Info,
   History,
   Crosshair,
-  AlertCircle // YENİ İKON EKLENDİ
+  AlertCircle
 } from 'lucide-react';
 import TransactionModal from '../components/TransactionModal';
 import SellModal from '../components/SellModal';

@@ -175,8 +175,6 @@
     color: white;
 }
 
-/* src/pages/Dashboard.css - Dosyanın Altına Eklenecekler */
-
 /* Varlık Dağılımı (Asset Allocation) Stilleri */
 .allocation-section {
     background: var(--bg-card);
@@ -199,7 +197,6 @@
     width: 100%;
     border-radius: 12px;
     overflow: hidden;
-    /* Dışarı taşan renkleri kesmek için */
     background-color: var(--bg-main);
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -212,7 +209,6 @@
 
 .allocation-segment:hover {
     filter: brightness(1.1);
-    /* Üzerine gelince rengi hafif aç */
 }
 
 .allocation-legends {
@@ -250,8 +246,6 @@
 .spin-animation {
     animation: spin 1s linear infinite;
 }
-
-/* src/pages/Dashboard.css dosyasının en altına eklenecek */
 
 /* Yenileme Butonu Animasyonları */
 @keyframes spin {
@@ -343,7 +337,6 @@
   .badge-tp { background: rgba(74, 222, 128, 0.2); color: #4ade80; }
   .badge-sl { background: rgba(251, 113, 133, 0.2); color: #fb7185; }
 
-  /* Dashboard.css EN ALTINA EKLENECEK */
 .heatmap-badge {
     display: inline-block;
     padding: 4px 8px;

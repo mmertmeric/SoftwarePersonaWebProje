@@ -56,8 +56,6 @@
     cursor: pointer;
   }
 
-  /* src/pages/Auth/Auth.css içine eklenecekler */
-
 .demo-link {
     color: var(--accent) !important;
     font-weight: 600;

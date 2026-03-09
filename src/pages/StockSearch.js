@@ -21,7 +21,7 @@ const StockSearch = () => {
   const [stocks, setStocks] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedSector, setSelectedSector] = useState('HEPSİ');
-  const [sortBy, setSortBy] = useState('default'); // 'default', 'price-desc', 'price-asc', 'gainers', 'losers'
+  const [sortBy, setSortBy] = useState('default');
   const [isFetching, setIsFetching] = useState(true);
   const [error, setError] = useState(null);
   
@@ -89,7 +89,6 @@ const StockSearch = () => {
         result.sort((a, b) => (parseFloat(a.rate) || 0) - (parseFloat(b.rate) || 0));
         break;
       default:
-        // Default (A-Z)
         result.sort((a, b) => a.name.localeCompare(b.name));
         break;
     }

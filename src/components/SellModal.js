@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { X, AlertTriangle, TrendingDown } from 'lucide-react';
 import { usePortfolio } from '../context/PortfolioContext';
-import './TransactionModal.css'; // AddModal ile aynı CSS'i kullanabilir
+import './TransactionModal.css';
 
 const SellModal = ({ isOpen, onClose, stock }) => {
   const { sellStock } = usePortfolio();
